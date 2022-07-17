@@ -7,7 +7,7 @@ export class App extends React.Component{
         return(
         <div>
             <HelloWorld />
-            <Welcome name= 'John' age= {28} /> 
+            <Welcome name= 'John' age= {10} /> 
             </div>
         )
     }
@@ -17,3 +17,5 @@ export class App extends React.Component{
   se la props age sia maggiore di 18*/
 
   /*Ho dovuto togliere <strong></strong> altrimenti non riusciva a renderizzare il componente invece come stringa non ci sono problemi*/ 
+
+  /*Ho modificato la props age per testare il componente Age quindi vado a modificare il codice in Welcome per evitare il non render del componente*/ 
