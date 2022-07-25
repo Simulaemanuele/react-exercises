@@ -1,19 +1,22 @@
 import React from "react";
 import { HelloWorld } from "./HelloWorld";
-import { Welcome } from "./Welcome";
+// import { Welcome } from "./Welcome";
 import { Counter } from "./Counter";
 import { ClickButton } from "./ClickButton";
 import { ClickTracker } from "./ClickTracker";
+import { InteractiveWelcome } from "./InteractiveWelcome";
 
 export class App extends React.Component{
     render(){
         return(
         <div>
             <HelloWorld />
-            <Welcome name= 'John' age= {10} /> 
+            <InteractiveWelcome />
+            {/* <Welcome name= 'John' age= {10} />  */}
             <Counter />
             <ClickButton /> 
             <ClickTracker /> 
+            
             </div>
         )
     }
