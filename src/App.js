@@ -3,6 +3,7 @@ import { HelloWorld } from "./HelloWorld";
 import { Welcome } from "./Welcome";
 import { Counter } from "./Counter";
 import { ClickButton } from "./ClickButton";
+import { ClickTracker } from "./ClickTracker";
 
 export class App extends React.Component{
     render(){
@@ -12,6 +13,7 @@ export class App extends React.Component{
             <Welcome name= 'John' age= {10} /> 
             <Counter />
             <ClickButton /> 
+            <ClickTracker /> 
             </div>
         )
     }
