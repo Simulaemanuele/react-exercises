@@ -13,12 +13,21 @@ export class Counter extends React.Component {
 
         
         componentDidMount(){
-        setInterval(() => {
+        this._interval=setInterval(() => {
             this.setState(() => {
                 return { count: this.state.count + (this.props.incrementAmount ?? 1) };
             })
         }, (this.props.incrementInterval ?? 1000))
     }
+
+    
+        
+            componentWillUnmount(){
+                if(this._interval){
+                    clearInterval(this._interval)
+                }
+            }
+        
     
 
     render() {
