@@ -6,6 +6,7 @@ import { ClickButton } from "./ClickButton";
 import { ClickTracker } from "./ClickTracker";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
 export class App extends React.Component{
     render(){
@@ -14,6 +15,7 @@ export class App extends React.Component{
             <HelloWorld />
             <InteractiveWelcome />
             <Login />
+            <UncontrolledLogin />
             {/* <Welcome name= 'John' age= {10} />  */}
             <Counter />
             <ClickButton /> 
