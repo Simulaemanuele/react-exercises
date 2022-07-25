@@ -50,6 +50,7 @@ export class Login extends React.Component {
                     <input
                         name="remember"
                         type="checkbox"
+                        checked={this.state.remember}
                         onChange={this.handleInputChange} />
 
                     <button
