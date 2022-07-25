@@ -14,7 +14,8 @@ export class TodoList extends React.Component {
 
     handlerAddName = () => {
         this.setState({
-            names: [...this.state.names, this.state.valueInput]
+            names: [...this.state.names, this.state.valueInput],
+            valueInput: ''
         })
     }
     render() {
