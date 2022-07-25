@@ -18,6 +18,12 @@ export class TodoList extends React.Component {
             valueInput: ''
         })
     }
+
+    handlerResetNames = () => {
+        this.setState({
+            names: []
+        })
+    }
     render() {
         return (
             <div>
@@ -33,6 +39,7 @@ export class TodoList extends React.Component {
                        />
 
                 <button onClick={this.handlerAddName} disabled={!(this.state.valueInput)}>Add name</button>
+                <button onClick={this.handlerResetNames}>Reset</button>
             </div>
         )
     }
