@@ -7,6 +7,13 @@ export class Login extends React.Component {
         remember: false
     }
 
+    onLogin = () => {
+        this.setState({
+            username: this.state.username,
+            password: this.state.password
+        })
+    }
+
     handleInputChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
@@ -44,7 +51,15 @@ export class Login extends React.Component {
                         name="remember"
                         type="checkbox"
                         onChange={this.handleInputChange} />
+
+                    <button
+                     type="submit"
+                      onClick={this.onLogin}
+                      disabled={!(this.state.username && this.state.password)}>Login</button>
                 </div>
+
+
+
             </div>
         )
     }
