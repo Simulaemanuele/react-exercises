@@ -2,6 +2,11 @@ import React, {createRef} from "react";
 
 export class UncontrolledLogin extends React.Component{
 _formRef=createRef();
+_autofocusUserRef=createRef();
+
+componentDidMount(){
+    this._autofocusUserRef.current.focus();
+}
 
 handleFormSubmit = (event) => {
     event.preventDefault();
@@ -24,7 +29,7 @@ render(){
             <h2>Uncontrolled Type Login</h2>
 
             <form ref={this._formRef} onSubmit={this.handleFormSubmit}>
-                <input name="username" placeholder="Username@example.com"/>
+                <input ref={this._autofocusUserRef} name="username" placeholder="Username@example.com"/>
                 <input name="password" type="password" placeholder="Password123"/>
                 <input name="remember" type="checkbox"/>
                 <button type="submit">Login</button>
