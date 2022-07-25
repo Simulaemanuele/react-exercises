@@ -2,6 +2,7 @@ import React from "react";
 import { HelloWorld } from "./HelloWorld";
 import { Welcome } from "./Welcome";
 import { Counter } from "./Counter";
+import { ClickButton } from "./ClickButton";
 
 export class App extends React.Component{
     render(){
@@ -10,6 +11,7 @@ export class App extends React.Component{
             <HelloWorld />
             <Welcome name= 'John' age= {10} /> 
             <Counter />
+            <ClickButton /> 
             </div>
         )
     }
