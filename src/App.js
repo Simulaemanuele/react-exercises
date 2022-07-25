@@ -5,6 +5,7 @@ import { Counter } from "./Counter";
 import { ClickButton } from "./ClickButton";
 import { ClickTracker } from "./ClickTracker";
 import { InteractiveWelcome } from "./InteractiveWelcome";
+import { Login } from "./Login";
 
 export class App extends React.Component{
     render(){
@@ -12,6 +13,7 @@ export class App extends React.Component{
         <div>
             <HelloWorld />
             <InteractiveWelcome />
+            <Login />
             {/* <Welcome name= 'John' age= {10} />  */}
             <Counter />
             <ClickButton /> 
