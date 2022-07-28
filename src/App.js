@@ -22,7 +22,19 @@ export class App extends React.Component{
             <Counter />
             <ClickButton /> 
             <ClickTracker /> 
-            <TodoList />
+            <TodoList render={(names) => {
+                return(
+                    <div className="container__todoListStyle">
+                        <ul className="container__todoListStyle__ul">
+                            {names.map((name, index) => <li key={name + index}>{name}
+                            <button onClick={() => {names.splice(index, 1);
+                            this.setState({ 
+                                    names: names });
+                                    }}>Remove</button></li>)}
+                        </ul>
+                    </div>
+                )
+            }}/>
         </Container>
         )
     }

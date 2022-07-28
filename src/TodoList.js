@@ -35,13 +35,8 @@ export class TodoList extends React.Component {
     render() {
         return (
             <div>
-                <ul>
-                    {this.state.names.map((name, index) => <li key={name + index}>{name}
-                    <button onClick={() => {this.state.names.splice(index, 1);
-                    this.setState({ 
-                            names: this.state.names });
-                            }}>Remove</button></li>)}
-                </ul>
+                
+                {this.props.render(this.state.names)}
 
                 <input type="text"
                     name="username"
