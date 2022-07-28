@@ -8,11 +8,12 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { TodoList } from "./TodoList";
+import { Container } from "./Container";
 
 export class App extends React.Component{
     render(){
         return(
-        <div>
+        <Container>
             <HelloWorld />
             <InteractiveWelcome />
             <Login />
@@ -22,8 +23,7 @@ export class App extends React.Component{
             <ClickButton /> 
             <ClickTracker /> 
             <TodoList />
-            
-            </div>
+        </Container>
         )
     }
 }
