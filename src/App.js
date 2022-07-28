@@ -9,33 +9,38 @@ import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { TodoList } from "./TodoList";
 import { Container } from "./Container";
+import { LanguageContext } from "./LanguageContext";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 export class App extends React.Component{
     render(){
         return(
-        <Container title="my awesome ugly app">
-            <HelloWorld />
-            <InteractiveWelcome />
-            <Login />
-            <UncontrolledLogin />
-            {/* <Welcome name= 'John' age= {10} />  */}
-            <Counter />
-            <ClickButton /> 
-            <ClickTracker /> 
-            <TodoList render={(names) => {
-                return(
-                    <div className="container__todoListStyle">
-                        <ul className="container__todoListStyle__ul">
-                            {names.map((name, index) => <li key={name + index}>{name}
-                            <button onClick={() => {names.splice(index, 1);
-                            this.setState({ 
-                                    names: names });
-                                    }}>Remove</button></li>)}
-                        </ul>
-                    </div>
-                )
-            }}/>
-        </Container>
+        <LanguageContext.Provider>
+            <DisplayLanguage />
+            <Container title="my awesome ugly app">
+                <HelloWorld />
+                <InteractiveWelcome />
+                <Login />
+                <UncontrolledLogin />
+                {/* <Welcome name= 'John' age= {10} />  */}
+                <Counter />
+                <ClickButton /> 
+                <ClickTracker /> 
+                <TodoList render={(names) => {
+                    return(
+                        <div className="container__todoListStyle">
+                            <ul className="container__todoListStyle__ul">
+                                {names.map((name, index) => <li key={name + index}>{name}
+                                <button onClick={() => {names.splice(index, 1);
+                                this.setState({ 
+                                        names: names });
+                                        }}>Remove</button></li>)}
+                            </ul>
+                        </div>
+                    )
+                }}/>
+            </Container>
+        </LanguageContext.Provider>
         )
     }
 }
