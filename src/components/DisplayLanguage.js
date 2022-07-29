@@ -1,10 +1,16 @@
 import React from "react";
 
-export class Message extends React.Component{
+
+export class DisplayLanguage extends React.Component {
+
+
+
     render() {
         return (
             <div>
-                <p>What a beautiful day!!</p>
+
+                
+
             </div>
         )
     }
