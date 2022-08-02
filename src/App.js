@@ -1,5 +1,6 @@
 import React from "react";
-import { Login } from "./Login";
+import { ClickCounter } from "./components/ClickCounter";
+
 
 
 
@@ -9,7 +10,7 @@ export class App extends React.Component{
     render(){
         return(
             <div className="mainContainer">
-                <Login />
+                <ClickCounter />
             </div>
         )
     }
