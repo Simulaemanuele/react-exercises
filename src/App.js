@@ -1,19 +1,13 @@
 import React from "react";
-import { ClickCounter } from "./components/ClickCounter";
-
-
-
-
-
-
-
+import { Login } from "./components/Login";
 
 export class App extends React.Component{
     
     render(){
         return(
             <div className="mainContainer">
-                <ClickCounter />
+                <h1>Form</h1>
+                <Login />
             </div>
         )
     }
