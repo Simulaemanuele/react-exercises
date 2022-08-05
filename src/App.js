@@ -1,16 +1,33 @@
-import React from "react";
-import { CarDetails } from "./components/CarDetails";
+import React, { useState } from "react";
+import { DisplayLanguage } from "./components/DisplayLanguage";
+import { LanguageContext } from "./components/LanguageContext";
 
 
 
-export class App extends React.Component{
-    
-    render(){
-        return(
-            <div className="mainContainer">
-                <CarDetails initialData={{defaultModel: "Nissan", defaultYear: 2020, defaultColor: "black"}}/>
-            </div>
-        )
+
+
+
+export function App() {
+    const [language, setLanguage] = useState('en')
+
+    function handleSelectLanguage(event) {
+        setLanguage(event.target.value)
     }
+
+
+
+
+    return (
+        <div className="mainContainer">
+            <select value={language} onChange={handleSelectLanguage}>
+                <option value='en'>English</option>
+                <option value='it'>Italiano</option>
+            </select>
+            <LanguageContext.Provider value={language}>
+                <DisplayLanguage />
+            </LanguageContext.Provider>
+        </div>
+    )
+
 }
 
