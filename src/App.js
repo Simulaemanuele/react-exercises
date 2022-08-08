@@ -15,7 +15,12 @@ export function App() {
 
     return (
         <div>
+            <h1>My App</h1>
             <Routes>
+                <Route path="*" element={<div>
+                    <h2>Page not found</h2>
+                    <Link to="/" >Return Home</Link>
+                </div>} />
                 <Route path="/" element={<Welcome />} />
                 <Route path="/counter" element={<Counter />} />
                 <Route path="/user" element={<ShowGithubUser />} />
