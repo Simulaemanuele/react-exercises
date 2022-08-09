@@ -1,15 +1,16 @@
 import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser({ username }) {
-    const {data, error, loading} = useGithubUser(username);
+    
+    const {users, error, isLoading} = useGithubUser(username);
 
     
     return(
         <div>
             
-            {loading && <h1>Loading...</h1>}
+            {isLoading && <h1>Loading...</h1>}
             {error && <h1>An error has occured, please insert valid username!</h1>}
-            {data && <h1>{data.name || data.login}</h1>}
+            {users && <h1>{users.name || users.login}</h1>}
         </div>
     )
 
