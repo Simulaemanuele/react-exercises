@@ -77,6 +77,14 @@ button{
     
 }
 
+button:hover{
+    opacity: 0.5;
+}
+
+button:active{
+    background-image: linear-gradient(orange,darkred);
+}
+
 .mainContainer{
     background-color: #F5F5DC;
     color: #000000;
